@@ -2,19 +2,16 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-#include "core.h"
-
+#define mapWidth 80
+#define mapHeight 30
 typedef struct SMario {
     float x, y;
 } TMario;
+// Реализация глобальной переменной mario
+char map[mapHeight][mapWidth+1]; 
+TMario mario;  // Определение переменной, объявленной в core.h
 
-#define mapWidth 80
-#define mapHeight 30
-
-char map[mapHeight][mapWidth+1];
-TMario mario;
-
-void ClearMap()
+void clearMap()
 {
     for (int i = 0; i < mapWidth; i++)
         map[0][i] = '.';
@@ -23,21 +20,20 @@ void ClearMap()
         sprintf(map[i], map[0]);
 }
 
-
-void ShowMap()
+void showMap()
 {
     map[mapHeight-1][mapWidth-1] = '\0';
     for(int i = 0; i < mapHeight; i++)
-        printf("%s\n", map[i]);
+        printf("%s", map[i]);
 }
 
-void SetCharPos(TMario* p_mario, float xPos, float yPos)
+void setCharPos(TMario* mario, float xPos, float yPos)
 {
-    (*p_mario).x = xPos;
-    (*p_mario).y = yPos;
+    mario->x = xPos;
+    mario->y = yPos;
 }
 
-void PutCharOnMap(TMario mario)
+void putCharOnMap(TMario mario)
 {
     int ix = (int)round(mario.x);
     int iy = (int)round(mario.y);

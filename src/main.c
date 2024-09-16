@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
+#include <string.h>
 #include "gameLogic.c"
-#include "core.h"
+
 int main()
 {
-    SetCharPos(&mario, 20, 10);
-    ClearMap();
-    PutCharOnMap(mario);
-    ShowMap();
+    setCharPos(&mario, 20, 10);
+    clearMap();
+    putCharOnMap(mario);
+    showMap();
     return 0;
 }
