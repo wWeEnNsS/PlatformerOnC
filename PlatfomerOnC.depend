@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1726489274 source:c:\users\Пользователь\codeblocks - c programming projects\platfomeronc\src\gamelogic.c
+	"main.c"
+
+1584205420 c:\users\Пользователь\codeblocks - c programming projects\platfomeronc\src\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1726490492 source:c:\users\Пользователь\codeblocks - c programming projects\platfomeronc\main.c
+	<stdio.h>
+	<stdlib.h>
+	"core.h"
+
+1726490467 c:\users\Пользователь\codeblocks - c programming projects\platfomeronc\core.h
+
