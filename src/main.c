@@ -6,7 +6,7 @@
 
 int main()
 {
-    setCharPos(&mario, 20, 10);
+    initChar(&mario, 39, 10, 3, 3);
     clearMap();
     putCharOnMap(mario);
     showMap();
