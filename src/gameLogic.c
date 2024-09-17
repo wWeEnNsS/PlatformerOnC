@@ -6,6 +6,7 @@
 #define mapHeight 30
 typedef struct SMario {
     float x, y;
+    float width, height;
 } TMario;
 // Реализация глобальной переменной mario
 char map[mapHeight][mapWidth+1]; 
@@ -31,6 +32,13 @@ void setCharPos(TMario* mario, float xPos, float yPos)
 {
     mario->x = xPos;
     mario->y = yPos;
+}
+
+void initChar(TMario* mario, float xPos, float yPos, float oWidth, float oHeight)
+{
+    setCharPos(mario, xPos, yPos);
+    (*mario).width = oWidth;
+    (*mario).height = oHeight;    
 }
 
 void putCharOnMap(TMario mario)
